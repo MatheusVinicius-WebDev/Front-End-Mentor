@@ -1,0 +1,118 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family= Outfit: wght @400;700 & display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+    text-decoration: none;
+}
+
+a {
+    color: currentColor;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 20px;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+body {    
+    width: 100vw;
+    height: 100vh;
+    max-width: 1440px;
+
+    background-color: hsl(212, 45%, 89%);
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 370px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    background-color: hsl(0, 0%, 100%);
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    padding: 20px;
+    width: 100%;
+    border-radius: 30px;
+    border: 1px solid black;
+}
+
+.card>h1 {
+    width: 90%;
+    font-size: 1.6em;
+    text-align: center;
+    color: hsl(218, 44%, 22%);
+    font-weight: 700;
+}
+
+.card>p {
+    width: 70%;
+    text-align: center;
+    color: hsl(220, 15%, 55%);
+    padding: 20px 0;
+}
+
+@media(max-width:375px) {
+    .container {
+        width: 80vw;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        width: 100%;
+        height: auto;
+        padding: 20px;
+
+        border: 1px solid black;
+        border-radius: 30px;
+    }
+
+    .card>h1 {
+        font-size: 1.3em;
+        text-align: center;
+        color: hsl(218, 44%, 22%);
+        width: 100%;
+    }
+
+    .card>p {
+        text-align: center;
+        color: hsl(220, 15%, 55%);
+        padding: 20px 0;
+        width: 100%;
+    }
+}
