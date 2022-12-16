@@ -9,11 +9,13 @@
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     height: 100vh;
     max-width: 1440px;
     margin: 0 auto;
-    padding: 0 30px;
 
     background: linear-gradient(-45deg,
             rgb(75, 75, 75),
@@ -23,58 +25,191 @@ body {
             rgb(255, 255, 255));
     background-attachment: fixed;
 }
-a{
+
+a {
     color: currentColor;
 }
+
 .intro {
+    margin: 10px;
+    border: 3px solid rgba(0, 0, 0, 0.164);
+    border-radius: 20px;
+    padding: 10px;
     float: left center;
     font-size: 2em;
     text-align: center;
     flex-wrap: wrap;
+
 }
-.link{
-    
+
+.link {
     color: rgb(7, 51, 248);
 }
+
 .container {
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
     text-align: center;
-    gap: 10px;
-    padding: 30px 0px;
     font-size: 1.3em;
+
 }
-.menu-one{
+
+.container article {
+    display: flex;
+    margin: 50px 0;
 }
-.Mmwnu-two{
+
+.challenges {
+    width: 50%;
 }
-.bt{
+
+.scroll-menu {
+    border-radius: 20px;
+    border: 3px solid rgba(0, 0, 0, 0.164);
+    background-color: rgba(255, 255, 255, 0.164);
+    height: 245px;
+    overflow: hidden scroll;
+    margin: 20px 10px;
+    
+}
+
+.scroll-menu::-webkit-scrollbar {
+    display: none;
+}
+
+.bt {
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: rgb(0, 0, 255);
     color: white;
-    width: 150px;
-    height: 70px;
-    border-radius: 5px;
-    padding: 5px;
+    width: 50%;
+    border-radius: 25px;
+    padding: 10px;
     margin: 10px auto;
 
-    text-shadow: 2px 2px 4px  rgba(0, 0, 0, 0.6);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
     box-shadow: 2px 2px 4px 3px rgba(0, 0, 0, 0.1);
 }
-.bt:hover,.br:focus{
-    background-color: rgb(5, 5, 177) ;
+
+.bt:hover,
+.br:focus {
+    background-color: rgb(5, 5, 177);
 }
-.d1-10{
+
+.d1-10 {
     cursor: pointer;
 }
-@media(max-width:375px){
-   
-    .intro{
-        font-size: 1em;
+h4{
+    background-color: white;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.377);
+    position: sticky;
+    top: 0;
+}
+footer{
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 20px;
+    margin-top: 50px;
+    min-width: 100vw;
+}
+/* .center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.text{
+    text-align: justify;
+    letter-spacing: 1px;
+    text-indent: 1.5em;
+    padding: 0 30px;
+    max-width: 900px;
+} */
+@media(max-width:375px) {
+
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        height: 100vh;
+        max-width: 1440px;
+        background: linear-gradient(-45deg,
+                rgb(75, 75, 75),
+                rgb(126, 126, 126),
+                rgb(150, 150, 151),
+                rgb(204, 204, 209),
+                rgb(255, 255, 255));
+        background-attachment: fixed;
     }
-    .container{
+
+    a {
+        color: currentColor;
+    }
+
+    .intro {
+        margin: 20px;
         font-size: 1em;
+        text-align: center;
+        flex-wrap: wrap;
+    }
+
+    .link {
+        color: rgb(7, 51, 248);
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        font-size: 1.3em;
+        min-height: 100vh;
+        margin: 0 7px;
+    }
+
+    .container article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 50px 0;
+    }
+
+    .challenges {
+        width: 100%;
+    }
+
+    .scroll-menu {
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.164);
+        height: 245px;
+        overflow: hidden scroll;
+        margin: 20px 0px;
+    }
+
+    .scroll-menu::-webkit-scrollbar {
+        display: none;
+    }
+
+    .bt {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(0, 0, 255);
+        color: white;
+        width: 97%;
+        border-radius: 25px;
+        padding: 10px;
+        margin: 10px auto;
+
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        box-shadow: 2px 2px 4px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    .bt:hover,
+    .br:focus {
+        background-color: rgb(5, 5, 177);
+    }
+
+    .d1-10 {
+        cursor: pointer;
     }
 }
